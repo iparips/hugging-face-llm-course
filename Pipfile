@@ -8,6 +8,11 @@ transformers = { extras = ["sentencepiece"] }
 datasets = "*"
 evaluate = "*"
 torch = "*"
+tqdm = "*"
+pd = "*"
+pandas = "*"
+python-dotenv = "*"
+requests = "*"
 
 [dev-packages]
 
