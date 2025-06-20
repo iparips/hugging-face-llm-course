@@ -1,4 +1,9 @@
-from transformers import pipeline
+from transformers import pipeline, BertConfig, BertModel
+from rich.console import Console
+from rich.syntax import Syntax
+from rich import print as rprint
+
+console = Console()
 
 # classifier = pipeline("sentiment-analysis")
 # response = classifier("I've been waiting for a HuggingFace course my whole life.")
@@ -30,14 +35,16 @@ from transformers import pipeline
 # result = ner("My name is Sylvain and I work at Hugging Face in Brooklyn.")
 # print(result)
 
-from transformers import BertConfig, BertModel
-
 # Building the config
+console.print("🔧 [bold blue]Building BERT Configuration...[/bold blue]")
 config = BertConfig()
-print(config)
+rprint(config)
 
 # Building the model from the config
+console.print("🤖 [bold green]Loading BERT Model...[/bold green]")
 model = BertModel.from_pretrained("bert-base-cased")
-print(model)
+console.print("✅ [bold green]Model loaded successfully![/bold green]")
 
+console.print("💾 [bold yellow]Saving model...[/bold yellow]")
 model.save_pretrained("/Users/ilya/Code/python/hugging-face-llm-course/models")  # type: ignore
+console.print("✅ [bold green]Model saved successfully![/bold green]")
