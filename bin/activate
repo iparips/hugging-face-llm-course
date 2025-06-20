@@ -59,9 +59,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(hugging-face-nlp-course) ${PS1:-}"
+    PS1="(hugging-face-llm-course) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(hugging-face-nlp-course) "
+    VIRTUAL_ENV_PROMPT="(hugging-face-llm-course) "
     export VIRTUAL_ENV_PROMPT
 fi
 

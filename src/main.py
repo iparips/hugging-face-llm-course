@@ -40,4 +40,4 @@ print(config)
 model = BertModel.from_pretrained("bert-base-cased")
 print(model)
 
-model.save_pretrained("/Users/ilya/Code/python/hugging-face-nlp-course/models")
+model.save_pretrained("/Users/ilya/Code/python/hugging-face-llm-course/models")  # type: ignore
